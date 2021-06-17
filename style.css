@@ -10,17 +10,19 @@
     padding-top: 40px;
     font-size: 26px;
     width: 100%;
-    height: 110px;
+    height: 150px;
 }
-
+.title h3 {
+    margin: 10px;
+}
 /* Botón para añadir un nuevo libro */
 .btn {
     margin: auto;
     width: 150px;
     height: 150px;
-    margin-bottom: -40px;
 }
 #newBook {
+    margin: 15px;
     font-weight: 900;
     border-radius: 50px;
     border: 0.5px solid rgba(85, 82, 82, 0.8);
@@ -61,7 +63,7 @@
     height: 250px;
     padding: 15px;
     text-align: center;
-    background-color: rgb(255, 217, 5);
+    background-color: #ffb703;
 }
 
 /* Eliminar libros de la caja de Libros */
@@ -88,7 +90,7 @@
 /* Información Libro */
 .infoBook {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 18px;
     margin: 3px;
 }
 
