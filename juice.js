@@ -10,7 +10,6 @@ let myLibrary = [
 ];
 
 const tabla = document.querySelector(".table");
-// let libros = addBookToLibrary(prompt("¿Cuál es tu libro favorito?"));
 
 //Botón para mostrar los libros en la página
 let nuevoLibro = document.querySelector("#newBook"),
