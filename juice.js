@@ -16,11 +16,19 @@ const tabla = document.querySelector(".table");
 let nuevoLibro = document.querySelector("#newBook"),
     popup = document.querySelector(".popup"),
     overlay = document.querySelector(".overlay"),
-    cerrarPopup = document.querySelector(".btn-cerrar-popup");
+    cerrarPopup = document.querySelector(".cerrarPopup"),
+    añadirLibro = document.querySelector(".btn-añadir"),
+    titulo = document.querySelector("#title");
 
 nuevoLibro.addEventListener("click", () => {
     overlay.classList.add("active");
     popup.classList.add("active");
+});
+
+añadirLibro.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    addBookToLibrary(titulo.value);
+    mostrarLibros(titulo.value.split());
 });
 
 cerrarPopup.addEventListener("click", () => {
@@ -28,8 +36,13 @@ cerrarPopup.addEventListener("click", () => {
     popup.classList.remove("active");
 });
 
-function Book() {
-    // the constructor...
+//Función Constructor
+
+function Book(title, autor, pages, year) {
+    this.name = title;
+    this.autor = autor;
+    this.pages = pages;
+    this.year = year;
 }
 
 //Función para añadir libros en la librería
@@ -38,14 +51,15 @@ function addBookToLibrary(libro) {
 }
 
 //Función para mostrar los libros dentro de una tabla
-function mostrarLibros(arregloLibros) {
+function mostrarLibros(arregloLibros = myLibrary) {
+    //Valor por defecto con la libreria
     arregloLibros.forEach((libro) => {
         let div = document.createElement("h4");
         let lectura = document.createElement("input");
         let cerrar = document.createElement("input");
-        lectura.type = "submit";
+        lectura.type = "button";
         lectura.value = "No Leído";
-        cerrar.type = "submit";
+        cerrar.type = "button";
         cerrar.value = "Eliminar";
         lectura.addEventListener("click", () => {
             if (lectura.style.backgroundColor == "black") {
@@ -64,7 +78,6 @@ function mostrarLibros(arregloLibros) {
             if (i !== -1) {
                 arregloLibros.splice(i, 1);
             }
-            console.log(arregloLibros);
         });
         lectura.setAttribute("class", "eliminarLibro");
         cerrar.setAttribute("class", "eliminarLibro");
@@ -74,7 +87,6 @@ function mostrarLibros(arregloLibros) {
         div.appendChild(cerrar);
         tabla.appendChild(div);
     });
-    console.log(arregloLibros);
 }
 
-mostrarLibros(myLibrary);
+mostrarLibros();

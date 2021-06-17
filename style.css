@@ -111,7 +111,7 @@
     opacity: 0;
 }
 
-.popup .btn-cerrar-popup {
+.popup .cerrarPopup {
     font-size: 16px;
     line-height: 16px;
     display: block;
@@ -119,7 +119,7 @@
     color: rgb(128, 120, 120);
     transition: 0.1s ease all;
 }
-.popup .btn-cerrar-popup:hover {
+.popup .cerrarPopup:hover {
     color: black;
 }
 
