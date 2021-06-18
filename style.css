@@ -22,7 +22,7 @@
     height: 150px;
 }
 #newBook {
-    margin: 15px;
+    margin-top: 36px;
     font-weight: 900;
     border-radius: 50px;
     border: 0.5px solid rgba(85, 82, 82, 0.8);
@@ -242,5 +242,60 @@
     to {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 900px) {
+    .main {
+        display: inline;
+    }
+
+    .title {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 16px;
+        width: 100%;
+        height: 50px;
+    }
+    .title h3 {
+        margin: 10px;
+    }
+
+    #newBook {
+        margin-top: 85px;
+        font-weight: 900;
+        border-radius: 50px;
+        border: 0.5px solid rgba(85, 82, 82, 0.8);
+        width: 120px;
+        height: 50px;
+    }
+    #newBook:hover {
+        font-weight: bold;
+        font-size: 15px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        box-shadow: 20px 20px 60px #bebebe, -20px -20px 6px #ffffff;
+    }
+
+    .table {
+        margin-top: 50px;
+        border-radius: 39px;
+        display: block;
+        height: auto;
+        width: auto;
+        border: 0.5px solid rgba(85, 82, 82, 0.8);
+    }
+
+    .libros {
+        margin: auto;
+        margin-top: 25px;
+        font-weight: 900;
+        font-size: px;
+        width: 300px;
+        height: 270px;
+        padding: 15px;
+        text-align: center;
+        background-color: #ffb703;
     }
 }
