@@ -290,6 +290,7 @@
     .libros {
         margin: auto;
         margin-top: 25px;
+        margin-bottom: 25px;
         font-weight: 900;
         font-size: px;
         width: 300px;
