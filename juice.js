@@ -42,6 +42,8 @@ añadirLibro.addEventListener("click", () => {
     } else {
         overlay.classList.remove("active");
 
+        // Creando instancias de la clase
+
         let newLibro = new Book(
             titulo.value, //title
             autoria.value, //autor
@@ -67,14 +69,16 @@ cerrarPopup.addEventListener("click", () => {
     popup.classList.remove("active");
 });
 
-//Función Constructor
+// Clase para crear nuevos libros
 
-function Book(title, autor, pages, year, estado) {
-    this.title = title;
-    this.autor = autor;
-    this.pages = pages;
-    this.year = year;
-    this.estado = estado;
+class Book {
+    constructor(title, autor, pages, year, estado) {
+        this.title = title;
+        this.autor = autor;
+        this.pages = pages;
+        this.year = year;
+        this.estado = estado;
+    }
 }
 
 //Función para añadir libros en la librería
