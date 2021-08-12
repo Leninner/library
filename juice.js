@@ -32,12 +32,7 @@ nuevoLibro.addEventListener("click", () => {
 
 //Botón para confirmar los cambios y añadir un nuevo libro
 añadirLibro.addEventListener("click", () => {
-    if (
-        titulo.value == "" ||
-        autoria.value == "" ||
-        cantidadPages.value == "" ||
-        publicacion.value == ""
-    ) {
+    if (titulo.value == "" || autoria.value == "" || cantidadPages.value == "" || publicacion.value == "") {
         alert("Completa todo el Formulario Por Favor");
     } else {
         overlay.classList.remove("active");
@@ -52,13 +47,7 @@ añadirLibro.addEventListener("click", () => {
 
         addBookToLibrary(newLibro.title);
 
-        mostrarLibros(
-            newLibro.title.split(),
-            newLibro.autor,
-            newLibro.pages,
-            newLibro.year,
-            newLibro.estado
-        );
+        mostrarLibros(newLibro.title.split(), newLibro.autor, newLibro.pages, newLibro.year, newLibro.estado);
     }
 });
 
@@ -83,13 +72,7 @@ function addBookToLibrary(libro) {
 }
 
 //Función para mostrar los libros dentro de una tabla
-function mostrarLibros(
-    arregloLibros = myLibrary,
-    author = "Desconocido",
-    pages = 456,
-    year = 1969,
-    estado = false
-) {
+function mostrarLibros(arregloLibros = myLibrary, author = "Desconocido", pages = 456, year = 1969, estado = false) {
     cantidadDeLibros.textContent = myLibrary.length;
     //Valor por defecto con la libreria
     arregloLibros.forEach((libro) => {
