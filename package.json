@@ -1,0 +1,23 @@
+{
+    "name": "library",
+    "version": "1.0.0",
+    "description": "Proyecto de Biblioteca Cada persona podrá añadir o eliminar libros a su libreria Se abrirá un formulario flotante para añadir libros.",
+    "main": "juice.js",
+    "scripts": {
+        "start": "live-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Leninner/library.git"
+    },
+    "keywords": [],
+    "author": "leninner",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Leninner/library/issues"
+    },
+    "homepage": "https://github.com/Leninner/library#readme",
+    "devDependencies": {
+        "live-server": "^1.2.1"
+    }
+}
