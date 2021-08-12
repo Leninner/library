@@ -25,30 +25,36 @@ let nuevoLibro = document.querySelector("#newBook"),
     cantidadDeLibros = document.querySelector("#cantidadDeLibros");
 
 //Botón para mostrar el formulario para añadir un nuevo libro
-nuevoLibro.addEventListener("click", () => {
+nuevoLibro.onclick = () => {
     overlay.classList.add("active");
     popup.classList.add("active");
-});
+};
 
 //Botón para confirmar los cambios y añadir un nuevo libro
 añadirLibro.addEventListener("click", () => {
-    if (titulo.value == "" || autoria.value == "" || cantidadPages.value == "" || publicacion.value == "") {
-        alert("Completa todo el Formulario Por Favor");
-    } else {
-        overlay.classList.remove("active");
+    overlay.classList.remove("active");
 
-        let newLibro = new Book(
-            titulo.value, //title
-            autoria.value, //autor
-            cantidadPages.value, //páginas
-            publicacion.value, //año
-            estadoCheck.checked
-        );
+    let newLibro = new Book(
+        titulo.value, //title
+        autoria.value, //autor
+        cantidadPages.value, //páginas
+        publicacion.value, //año
+        estadoCheck.checked
+    );
 
-        addBookToLibrary(newLibro.title);
+    const title = document.getElementById("title");
 
-        mostrarLibros(newLibro.title.split(), newLibro.autor, newLibro.pages, newLibro.year, newLibro.estado);
-    }
+    title.addEventListener("input", function () {
+        if (title.validity.typeMismatch) {
+            title.setCustomValidity("I am expecting an e-mail address!");
+        } else {
+            title.setCustomValidity("");
+        }
+    });
+
+    addBookToLibrary(newLibro.title);
+
+    mostrarLibros(newLibro.title.split(), newLibro.autor, newLibro.pages, newLibro.year, newLibro.estado);
 });
 
 cerrarPopup.addEventListener("click", () => {
