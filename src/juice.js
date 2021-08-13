@@ -1,5 +1,12 @@
 let libro = new Book("La Cabaña del Tíoooo Tom", "Leninner", 124453, 4151, true),
     hi = new Book("Jajaja", "jksdlj", 4564, 56456, false);
+
+const lenin = document.querySelector("#lenin"),
+    mathias = document.querySelector("#mathias");
+
+lenin.onclick = () => alert("Hi");
+mathias.onclick = () => alert("Yes");
+
 // const tabla = document.querySelector(".table");
 
 // let nuevoLibro = document.querySelector("#newBook"),
