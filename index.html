@@ -15,76 +15,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
     </head>
     <body>
-        <div class="main">
-            <div class="title">
-                <h1>The Best Books In The World</h1>
-                <h3>
-                    Cantidad de Libros:
-                    <p id="cantidadDeLibros"></p>
-                </h3>
-            </div>
-            <div class="btn">
-                <input id="newBook" type="button" value="NUEVO LIBRO" />
-            </div>
-            <div class="table"></div>
-            <!-- Toda la Página -->
-            <div class="overlay">
-                <!-- Formulario -->
-                <div class="popup">
-                    <div class="cerrarPopup"><i class="fas fa-times"></i></div>
-                    <h3>Añade Un Nuevo Libro</h3>
-                    <h4>Y Sigue Soñando</h4>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <label for="title">
-                                Nombre:
-                                <input type="text" placeholder="Nombre del Libro" id="title" required minlength="7" />
-                            </label>
-                            <label for="author">
-                                Autor:
-                                <input type="text" placeholder="Autor del Libro" id="author" required />
-                            </label>
-                            <label for="">
-                                Año de Publicación:
-                                <input
-                                    type="number"
-                                    placeholder="Año de Publicación"
-                                    id="year"
-                                    required
-                                    min="1980"
-                                    max="2021"
-                                />
-                            </label>
-                            <label for="">
-                                # de Páginas
-                                <input
-                                    type="number"
-                                    placeholder="Número de Páginas"
-                                    id="pages"
-                                    required
-                                    min="10"
-                                    max="500"
-                                />
-                            </label>
-                            <h4>¿Ya Lo Leíste?</h4>
-                            <input id="check" type="checkbox" />
-                        </div>
-                        <button type="button" class="btn-añadir">Añadir</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <form validate>
-            <p>
-                <label for="mail">
-                    <span>Please enter an email address:</span>
-                    <input type="email" id="mail" name="mail" required minlength="8" />
-                    <input type="text" required minlength="14" />
-                    <span class="error" aria-live="polite"></span>
-                </label>
-            </p>
-            <button>Submit</button>
-        </form>
+        <div class="main"></div>
         <script src="./juice.js"></script>
         <script src="./form.js"></script>
     </body>
