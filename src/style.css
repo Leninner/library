@@ -47,7 +47,8 @@
   right: 0;
 }
 .carousel .carousel__container .carousel-item .carousel-item__details img {
-  width: 32px;
+  width: 28px;
+  margin-right: 10px;
 }
 .carousel .carousel__container .carousel-item .carousel-item__details .carousel-item__details--subtitle,
 .carousel .carousel__container .carousel-item .carousel-item__details .carousel-item__details--title {
@@ -58,13 +59,13 @@
   text-decoration: underline;
 }
 .carousel .carousel__container .carousel-item:hover ~ .carousel-item {
-  transform: translate3d(140px, 0, 0);
+  transform: translate3d(120px, 0, 0);
 }
 .carousel .carousel__container:hover .carousel-item {
   opacity: 0.3;
 }
 .carousel .carousel__container:hover .carousel-item:hover {
-  transform: scale(1.5);
+  transform: scale(1.23);
   opacity: 1;
 }
 
