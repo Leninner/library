@@ -1,25 +1,5 @@
-//Función Constructor
-
-function Book(title, autor, pages, year, estado) {
-    this.title = title;
-    this.autor = autor;
-    this.pages = pages;
-    this.year = year;
-    this.estado = estado;
-}
-
-let myLibrary = [
-    "De Cero a Uno",
-    "La Gallina Degollada",
-    "Padre Rico, Padre Pobre",
-    "Biblia del Nuevo Mundo",
-    "Véndele a la Mente, no a la Gente",
-    "Alimento",
-    "Hábitos Atómicos",
-    "Tiny Habits",
-    "Platzi",
-];
-
+let libro = new Book("La Cabaña del Tíoooo Tom", "Leninner", 124453, 4151, true),
+    hi = new Book("Jajaja", "jksdlj", 4564, 56456, false);
 // const tabla = document.querySelector(".table");
 
 // let nuevoLibro = document.querySelector("#newBook"),
