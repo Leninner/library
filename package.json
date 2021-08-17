@@ -4,7 +4,7 @@
     "description": "Proyecto de Biblioteca Cada persona podrá añadir o eliminar libros a su libreria Se abrirá un formulario flotante para añadir libros.",
     "main": "juice.js",
     "scripts": {
-        "startLive": "live-server"
+        "start": "live-server"
     },
     "repository": {
         "type": "git",
