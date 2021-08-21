@@ -155,4 +155,20 @@ main .btnMain .button:hover::after {
   background: #999;
 }
 
+.form.active {
+  width: 100%;
+  height: auto;
+}
+.form.active input {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border-style: none;
+  border: 2px solid black;
+  text-align: center;
+}
+.form.active ::placeholder {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

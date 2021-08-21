@@ -164,3 +164,19 @@ main {
 ::-webkit-scrollbar:hover:active {
     background: #999;
 }
+
+.form.active {
+    width: 100%;
+    height: auto;
+    input {
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        border-style: none;
+        border: 2px solid black;
+        text-align: center;
+    }
+    ::placeholder {
+        text-align: center;
+    }
+}
