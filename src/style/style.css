@@ -155,11 +155,12 @@ main .btnMain .button:hover::after {
   background: #999;
 }
 
-.form.active {
+.form {
   width: 100%;
   height: auto;
+  display: none;
 }
-.form.active input {
+.form input {
   width: 200px;
   height: 50px;
   border-radius: 5px;
@@ -167,8 +168,40 @@ main .btnMain .button:hover::after {
   border: 2px solid black;
   text-align: center;
 }
-.form.active ::placeholder {
+.form ::placeholder {
   text-align: center;
+}
+
+.form.active {
+  display: block;
+}
+.form.active form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form.active form label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+}
+.form.active form label input {
+  margin-top: 5px;
+}
+.form.active form .addBook {
+  width: 175px;
+  height: 50px;
+  border-radius: 5px;
+  border-style: none;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.form.active form .addBook:hover {
+  border: 2px solid #ff2424;
 }
 
 /*# sourceMappingURL=style.css.map */

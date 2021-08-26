@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Biblioteca | Leninner</title>
-        <link rel="stylesheet" href="./src/style/style.css" />
-        <link rel="icon" href="https://img.icons8.com/nolan/64/edit--v1.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <main>
-            <header class="header">
-                <h1>The Best Books In The World</h1>
-                <p>Did you know?</p>
-            </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca | Leninner</title>
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="icon" href="https://img.icons8.com/nolan/64/edit--v1.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <h1>The Best Books In The World</h1>
+        <p>Did you know?</p>
+      </header>
 
-            <section class="btnMain">
-                <button type="button" id="addBookWithForm" class="button">Add Book</button>
-            </section>
-        </main>
+      <section class="btnMain">
+        <button type="button" id="addBookWithForm" class="button">Add Book</button>
+      </section>
+    </main>
 
-        <section class="form"></section>
+    <section class="form">
+      <form action="">
+        <h2>Book</h2>
+        <label for="title">Title: <input type="text" id="title" placeholder="Title" /></label>
+        <label for="autor">Author: <input type="text" id="autor" placeholder="Author" /></label>
+        <label for="pages"># Pages: <input type="number" id="pages" placeholder="Number of pages" /></label>
+        <label for="year">Year: <input type="date" id="year" placeholder="Year of Publication" /></label>
+        <button class="addBook" type="button">Add</button>
+      </form>
+    </section>
 
-        <section class="carousel">
-            <div class="carousel__container"></div>
-        </section>
-        <script src="./src/index.js" type="module"></script>
-    </body>
+    <section class="carousel">
+      <div class="carousel__container"></div>
+    </section>
+    <script src="./src/index.js" type="module"></script>
+  </body>
 </html>
