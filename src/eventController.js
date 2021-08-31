@@ -18,7 +18,7 @@ const displayForm = () => {
 
       const book = new Book(title.value, autor.value, pages.value, year.value, true);
       book.setInfo();
-      book = null;
+      book = '';
     });
   } else {
     formulario.classList.remove('active');
