@@ -8,6 +8,7 @@ let myLibrary = [
   'Hábitos Atómicos',
   'Tiny Habits',
   'Platzi',
+  'Mathias',
 ];
 
 const tabla = document.querySelector('.table');
@@ -28,22 +29,39 @@ let nuevoLibro = document.querySelector('#newBook'),
 nuevoLibro.addEventListener('click', () => {
   overlay.classList.add('active');
   popup.classList.add('active');
+  console.log('Yes');
 });
 
 //Botón para confirmar los cambios y añadir un nuevo libro
 añadirLibro.addEventListener('click', () => {
-  overlay.classList.remove('active');
-  let newLibro = new Book(
-    titulo.value, //title
-    autoria.value, //autor
-    cantidadPages.value, //páginas
-    publicacion.value, //año
-    estadoCheck.checked
-  );
+  if (titulo.value == '' || autoria.value == '' || cantidadPages.value == '' || publicacion.value == '') {
+    alert('Completa todos los campos');
+  } else {
+    if (!titulo.checkValidity()) {
+      titulo.setCustomValidity();
+    } else if (!autoria.checkValidity()) {
+      autoria.setCustomValidity();
+    } else if (!cantidadPages.checkValidity()) {
+      cantidadPages.setCustomValidity();
+    } else if (!publicacion.checkValidity()) {
+      publicacion.setCustomValidity();
+    } else {
+      overlay.classList.remove('active');
+      popup.classList.remove('active');
 
-  addBookToLibrary(newLibro.title);
+      let newLibro = new Book(
+        titulo.value, //title
+        autoria.value, //autor
+        cantidadPages.value, //páginas
+        publicacion.value, //año
+        estadoCheck.checked
+      );
 
-  mostrarLibros(newLibro.title.split(), newLibro.autor, newLibro.pages, newLibro.year, newLibro.estado);
+      addBookToLibrary(newLibro.title);
+
+      mostrarLibros(newLibro.title.split(), newLibro.autor, newLibro.pages, newLibro.year, newLibro.estado);
+    }
+  }
 });
 
 cerrarPopup.addEventListener('click', () => {

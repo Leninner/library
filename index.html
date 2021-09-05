@@ -37,19 +37,18 @@
           <span class="cerrarPopup"><i class="fas fa-times"></i></span>
           <h3>Añade Un Nuevo Libro</h3>
           <h4>Y Sigue Soñando</h4>
-          <form action="">
+          <form>
             <div class="contenedor-inputs">
-              <input type="text" placeholder="Nombre del Libro" id="title" />
-              <input type="text" placeholder="Autor del Libro" id="author" />
-              <input type="number" placeholder="Año de Publicación" id="year" min="0" max="2021" step="10" />
-              <input type="number" placeholder="Número de Páginas" id="pages" min="1" step="10" />
+              <input type="text" placeholder="Nombre del Libro" id="title" minlength="5" />
+              <input type="text" placeholder="Autor del Libro" id="author" minlength="3" />
+              <input type="number" placeholder="Año de Publicación" id="year" min="0" max="2021" />
+              <input type="number" placeholder="Número de Páginas" id="pages" min="1" />
               <!-- step sirve para saltar entre números de "steps" rango -->
               <!-- min sirve para poner el número mínimo y máx lo contrario -->
               <h4>¿Ya Lo Leíste?</h4>
-
               <input id="check" type="checkbox" />
             </div>
-            <input type="button" class="btn-añadir" value="Añadir" />
+            <button class="btn-añadir" type="submit">Añadir</button>
           </form>
         </section>
       </section>
