@@ -29,7 +29,6 @@ let nuevoLibro = document.querySelector('#newBook'),
 nuevoLibro.addEventListener('click', () => {
   overlay.classList.add('active');
   popup.classList.add('active');
-  console.log('Yes');
 });
 
 //Botón para confirmar los cambios y añadir un nuevo libro
@@ -37,30 +36,20 @@ añadirLibro.addEventListener('click', () => {
   if (titulo.value == '' || autoria.value == '' || cantidadPages.value == '' || publicacion.value == '') {
     alert('Completa todos los campos');
   } else {
-    if (!titulo.checkValidity()) {
-      titulo.setCustomValidity();
-    } else if (!autoria.checkValidity()) {
-      autoria.setCustomValidity();
-    } else if (!cantidadPages.checkValidity()) {
-      cantidadPages.setCustomValidity();
-    } else if (!publicacion.checkValidity()) {
-      publicacion.setCustomValidity();
-    } else {
-      overlay.classList.remove('active');
-      popup.classList.remove('active');
+    overlay.classList.remove('active');
+    popup.classList.remove('active');
 
-      let newLibro = new Book(
-        titulo.value, //title
-        autoria.value, //autor
-        cantidadPages.value, //páginas
-        publicacion.value, //año
-        estadoCheck.checked
-      );
+    let newLibro = new Book(
+      titulo.value, //title
+      autoria.value, //autor
+      cantidadPages.value, //páginas
+      publicacion.value, //año
+      estadoCheck.checked
+    );
 
-      addBookToLibrary(newLibro.title);
+    addBookToLibrary(newLibro.title);
 
-      mostrarLibros(newLibro.title.split(), newLibro.autor, newLibro.pages, newLibro.year, newLibro.estado);
-    }
+    mostrarLibros(newLibro.title.split(), newLibro.autor, newLibro.pages, newLibro.year, newLibro.estado);
   }
 });
 
@@ -71,12 +60,14 @@ cerrarPopup.addEventListener('click', () => {
 
 //Función Constructor
 
-function Book(title, autor, pages, year, estado) {
-  this.title = title;
-  this.autor = autor;
-  this.pages = pages;
-  this.year = year;
-  this.estado = estado;
+class Book {
+  constructor(title, autor, pages, year, estado) {
+    this.title = title;
+    this.autor = autor;
+    this.pages = pages;
+    this.year = year;
+    this.estado = estado;
+  }
 }
 
 //Función para añadir libros en la librería
