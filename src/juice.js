@@ -50,6 +50,13 @@ añadirLibro.addEventListener('click', () => {
     addBookToLibrary(newLibro.title);
 
     mostrarLibros(newLibro.title.split(), newLibro.autor, newLibro.pages, newLibro.year, newLibro.estado);
+
+    titulo.value = '';
+    autoria.value = '';
+    cantidadPages.value = '';
+    publicacion.value = '';
+    estadoCheck.value = '';
+    estadoCheck.checked = false;
   }
 });
 
